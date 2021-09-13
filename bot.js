@@ -84,7 +84,7 @@ async function whatsAsena () {
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
-        await axios.get('https://gist.githubusercontent.com/souravkl11/1df3eeb29415b94c119c6d459ce9ee6e/raw').then(async (ann) => {
+        await axios.get('https://gist.githubusercontent.com/phaticusthiccy/d0d1855bd0098d773759b4f3345bd292/raw/').then(async (ann) => {
             const { infotr, infoen, infoes, infopt, infoid, infoaz, infohi, infoml, inforu} = ann.data.announcements          
             if (infotr !== '' && config.LANG == 'TR') {
                 while (getGMTh == 19 && getGMTm == 1) { 
@@ -813,7 +813,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 await conn.sendMessage(conn.user.jid, '*-- ERROR REPORT [𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊] --*' + 
                                     '\n*𝐑𝐀𝐆𝐀𝐍𝐎𝐑𝐊 an error has occurred!*'+
                                     '\n*This error log may include your number or the number of an opponent. Please be careful with it!*' +
-                                    '\n*സീൻ ഇല്ലാത്ത error ആണ്.*' +
+                                    '\n*You can write to our Telegram group for help.*' +
                                     '\n*Aslo you can join our support group:* https://chat.whatsapp.com/G18G7QjUqi6GqkWvUwre4u' +
                                     '\n*This message should have gone to your number (saved messages).*\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
@@ -937,7 +937,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     );
                                 }
                                 else {
-                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻സീൻ ഇല്ലാത്ത error ആണ്🙇🏻*' +
+                                    return await conn.sendMessage(conn.user.jid, '*🙇🏻 Sorry, I Couldnt Read This Error! 🙇🏻*' +
                                         '\n_You can write to our support group for more help /n https://chat.whatsapp.com/G18G7QjUqi6GqkWvUwre4u'
                                         , MessageType.text
                                     );
